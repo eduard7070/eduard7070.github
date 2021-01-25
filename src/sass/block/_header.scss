@@ -1,0 +1,202 @@
+.header {
+    height: 200px;
+    background: url(../img/header_fon.png) top no-repeat;
+    &__top {
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 0 4px 0 4px;
+    }
+    &__bootom {
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 0 20px 0 20px;
+    }
+    
+}
+
+.top-header {
+    &__content_container {
+        display: flex;
+        padding-top: 25px ;
+        height: 90px;
+    }
+    &__column {
+        flex:0 1 50% ;
+        &:nth-child(2){
+            align-self: flex-start;
+            padding: 16px 0 0 0;
+            flex: 0 0 190px;
+            text-align: center;
+        }
+    }
+    &__logo {
+        font-family: Play;
+        font-size: 48px;
+        font-weight: bold;
+        color: #ffffff;
+        text-transform: uppercase;
+        line-height: 0.4;
+        span{
+            font-size: 12px;
+            font-weight: 300;
+            color: #ffffff;
+            margin-top: 14px;
+        }
+    }
+}
+.menu {
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+       }
+    &__item{
+        flex:0 1 33.3%;
+        margin-top: px;
+    }
+    &__link {
+        height: 27px;
+        font-family: Play;
+        font-size: 14px;
+        font-weight: bold;
+        color: #ffffff;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 22px;
+        letter-spacing: -1px;
+        border-radius: 20px;
+        
+            &:hover{
+                background-color:#068292;
+            }
+        
+        }
+    
+}
+.contacts-header {
+    display: flex;
+    justify-content: center;
+    &__column {
+        border-right:1px solid #ffff;
+        padding: 0 30px;
+            &:last-child{
+            border:0;
+        }
+    }
+    &__item {
+        &_icon {
+            background:url(../icons/tel_iconka.png) left no-repeat;
+            padding: 0 0 0 37px;
+        }
+    }
+    &__label {
+        font-size: 12px;
+        font-weight: 300;
+        text-align: left;
+        color: #ffffff;
+    }
+    &__phone {
+        display: block;
+        margin-top: 10px;
+        font-size: 18px;
+        font-weight: 900;
+        color: #ffffff;
+        white-space: nowrap;
+    }
+}
+.bootom-header {
+    &__content_container {
+        height: 63px;
+        display: flex;
+        justify-content: space-between;
+        align-items:center;
+    }
+}
+.action-header {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    &__login {
+        padding: 0 0 0 36px;
+        background:url(../icons/exsit_icon.png) left no-repeat;
+        display: inline-block;
+        line-height: 24px;
+        font-size: 14px;
+        font-weight: 300;
+        color: #999999;
+       }
+    &__reg {
+        background:url(../icons/golowa_icon.png) left no-repeat;
+        padding: 0 0 0 36px;
+        margin-left: 54px;
+        font-size: 14px;
+        font-weight: 300;
+        display: inline-block;
+        line-height: 24px;
+        color: #999999;
+    }
+    &__email {
+        padding: 0 0 0 36px;
+        background:url(../icons/pismo_icon.png) left no-repeat;
+        margin-left: 54px;
+        font-size: 14px;
+        font-weight: 300;
+        display: inline-block;
+        color: #999999;
+        line-height: 24px;
+    }
+}
+.info-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    padding:0 0 0 20px ;
+     &__callback {
+        background:url(../icons/obr_zvanok_icon.png) left no-repeat;
+        font-size: 14px;
+        font-weight: 300;
+        display: inline-block;
+        color: #999999;
+        line-height: 24px;
+        padding: 0 0 0 36px;
+        text-align: center;
+        margin-left: 75px;
+    }
+    &__shedule {
+        background: url(../icons/kalendar_icon.png) left no-repeat;
+        margin-left: 38px;
+        font-size: 12px;
+        font-weight: 300;
+        display: inline-block;
+        color: #999999;
+        line-height: 24px;
+        padding: 0 0 0 36px;
+        text-align: center;
+        span{
+            font-weight: 900; 
+        }
+    }
+    &__cart {
+        background:url(../icons/karzina_icon.png) left no-repeat;
+        width: 43px;
+        height: 43px;
+        margin-left: 38px;
+        position: relative;
+        display:inline-block;
+        line-height: 25px;
+        span{
+            padding:0 11px;
+            font-size: 18px;
+            font-weight: 300;
+            background-color:#f68038;
+            position: absolute;
+            right: 0;
+            top:-3px;
+            color:#ffffff;
+            border-radius: 10px;
+            transform: translate(70%, 0);
+        }
+    }
+}
+

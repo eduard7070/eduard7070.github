@@ -1,0 +1,82 @@
+@font-face {
+    font-family: 'Play';
+    src: local('Play Bold'), local('Play-Bold'),
+        url('../../font/Play-Bold.woff2') format('woff2'),
+        url('../../font/Play-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  
+  @font-face {
+    font-family: 'Roboto';
+    src: local('Roboto Medium'), local('Roboto-Medium'),
+        url('../../font/Roboto-Medium.woff2') format('woff2'),
+        url('../../font/Roboto-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Roboto';
+    src: local('Roboto Bold'), local('Roboto-Bold'),
+        url('../../font/Roboto-Bold.woff2') format('woff2'),
+        url('../../font/Roboto-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Roboto';
+    src: local('Roboto Black'), local('Roboto-Black'),
+        url('../../font/Roboto-Black.woff2') format('woff2'),
+        url('../../font/Roboto-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Roboto';
+    src: local('Roboto'), local('Roboto-Regular'),
+        url('../../font/Roboto-Regular.woff2') format('woff2'),
+        url('../../Roboto-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Roboto';
+    src: local('Roboto Thin'), local('Roboto-Thin'),
+        url('../../font/Roboto-Thin.woff2') format('woff2'),
+        url('../../Roboto-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Roboto';
+    src: local('Roboto Light'), local('Roboto-Light'),
+        url('../../font/Roboto-Light.woff2') format('woff2'),
+        url('../../font/Roboto-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'UniSansCaps';
+    src: local('Uni Sans  CAPS'), local('UniSansCaps'),
+        url('../../UniSansCaps.woff2') format('woff2'),
+        url('../../font/UniSansCaps.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  

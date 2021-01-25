@@ -1,0 +1,398 @@
+@media(max-width:1200px){
+    .header {
+        &__top {
+            max-width: 991px;
+            margin: 0 auto;
+            padding: 0 4px 0 4px;
+        }
+        &__bootom {
+            max-width: 991px;
+            margin: 0 auto;
+            padding: 0 4px 0 4px;
+        }
+    }
+    
+    .top-header {
+        &__content_container {
+            display: flex;
+            padding-top: 25px ;
+            height: 90px;
+        }
+        &__logo {
+           font-size: 45px;
+            span{
+                font-size: 11px;
+            }  
+        }
+    }
+    .menu {
+        &__link {
+            height: 24px;
+            font-size: 12px;
+            padding: 0 16px;
+            border-radius: 17px;
+         }
+    }
+    
+    .contacts-header {
+        display: flex;
+        justify-content: center;
+        &__column {
+            border-right:1px solid #ffff;
+            padding: 0 25px,
+         }
+        &__item {
+            &_icon {
+                padding: 0 0 0 30px;
+            }
+        }
+        &__label {
+            font-size: 11px;
+            }
+        &__phone {
+            display: block;
+            margin-top: 8px;
+            font-size: 15px;
+           }
+    }
+    .bootom-header {
+        &__content_container {
+            justify-content: space-around;
+            padding: 0 15px;
+           }
+    }
+    .action-header {
+        &__login {
+            font-size: 12px;
+            padding-left: 25px;
+           }
+        &__reg {
+            font-size: 12px;
+            margin-left: 10px;
+        }
+        &__email {
+            margin-left: 35px;
+            font-size: 12px;
+        }
+    }
+    .info-header {
+        &__callback {
+            background:url(../../icons/obr_zvanok_icon.png) left no-repeat;
+            font-size: 12px;
+            }
+        &__shedule {
+            background: url(../../icons/kalendar_icon.png) left no-repeat;
+            margin-left: 25px;
+            font-size: 11px;            
+        }
+        &__cart {
+            background:url(../../icons/karzina_icon.png) left no-repeat;
+            margin-left: 25px;     
+        }
+    }
+    
+}
+
+
+@media(max-width: 991px){
+    .header {
+        &__top {
+            padding: 0;
+        }
+        &__bootom {
+            padding: 0 ;
+        }
+    }
+    .menu{
+        position: relative;
+        &__list{
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(13, 167, 228, 0.6);
+            flex-wrap: nowrap;
+            padding: 0 10px 0 10px;
+            text-align: center;
+            top:66px;
+            left:-100%;
+            transition: 1s all;
+            &_active{
+                left:0;
+            }
+        }
+
+        &__item{
+            flex:none;
+            margin-top: 25px;
+                }
+           
+       
+
+        
+        &__link{
+            font-size: 18px ;
+            letter-spacing: 0px;
+            border-radius: 20px;
+        }
+        &__icon{
+            display: block;
+            width: 35px;
+            height: 14px;
+            position: absolute;
+            left:10px;
+           
+            padding: 4px;
+            span{
+                height: 3px;
+                width: 100%;
+                background-color: rgb(255, 255, 255);
+                display: block;
+                margin-top: 3px;
+                transition: 0.6s all;
+                
+            }
+            &_active{
+                span{
+                    margin-bottom:-5px;
+                    &:nth-child(1){
+                        transform:translateY(4px) rotate(-45deg);
+                    }
+                    &:nth-child(2){
+                        display: none;
+                    }
+                    &:nth-child(3){
+                        transform:translateY(3px) rotate(45deg);
+                    }
+              }
+         
+           }
+        }
+    }
+    .contacts-header{
+        &__column {
+            border-right:1px solid #ffff;
+            padding: 0 12px,
+        }
+        &__label {
+            font-size: 8px;
+            }
+        &__phone {
+            display: block;
+            margin-top: 6px;
+            font-size: 11px;
+           }
+    }
+    .top-header {
+        &__logo {
+            font-size: 35px;
+             span{
+                 font-size: 9px;
+             }  
+         }
+    }
+    .info-header{
+        &__callback{
+            background:none;
+            padding: 0;
+            margin: 0;
+    }
+        &__shedule{
+            display:none;
+    }
+}
+    .action-header{
+        &__login, &__reg, &__email{
+            background: none;
+        }
+        &__reg, &__email{
+            padding: 0;
+            margin: 0;
+        }
+        
+    }  
+    .bootom-header{
+        &__content_container{
+            justify-content: space-between;
+            padding:0 60px 0 0;
+          
+        }
+    }
+    .action-header{
+        li{
+            display: block;
+            margin-right: 30px;
+        }
+    } 
+}
+@media (max-width: 767px){
+    .header{
+        background: url(../../img/header_fon.png) no-repeat;
+    }
+    .contacts-header{
+        justify-content: flex-end;
+        &__column {
+            border:none;
+            padding: 0 12px;
+            &:nth-child(2){
+                display: none;
+            }
+        }
+        &__label {
+            font-size: 8px;
+            }
+        &__phone {
+            display: block;
+            margin-top: 6px;
+            font-size: 11px;
+           }
+       
+    }
+    .menu{
+        &__list{
+            width: 120%;
+            height: 100vh;
+            left:-120%;
+            &_active{
+                left:0;
+            }
+        }
+
+    }
+    .top-header {
+        &__column:nth-child(2) {
+            padding: 0 0 0 0;
+        }
+            
+        &__logo {
+            font-size: 35px;
+             span{
+                 font-size: 9px;
+             }  
+         }
+    }
+   
+    
+    .bootom-header{
+        &__column{
+            margin: 0;
+        }
+        &__content_container{
+            justify-content: space-between;
+            
+        }
+        &__action{
+            margin-top: -3px;
+            margin-left: 27px;
+        }
+       
+    }
+    .info-header{
+        margin: 0;
+        padding: 0;
+        &__cart{
+            span{
+                font-size: 12px;
+            }
+        }
+        
+    }
+    
+     
+}
+
+@media (max-width: 576px){
+    .contacts-header{
+        &__label{
+            font-size: 0;
+        }
+        &__phone{
+            font-size: 0;
+            line-height: 30px;
+        }
+    }
+    .action-header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        &__login, &__reg, &__email{
+            background: none;
+            margin: 12px 0 0 0;
+            font-family: play;
+            font-size: 16px;
+            color:black;
+            border-radius: 20px;
+            padding: 0 9px;
+
+        
+            &:hover{
+                background-color:#068292;
+            }
+        }
+    
+    }
+    .info-header{
+        flex-direction: column;
+        display: flex;
+        padding: 0 50px 0 0;
+        &__shedule{
+            display:none;
+        }
+        &__callback{
+            background:none;
+            margin: 0;
+            padding: 0 30px 0 0;
+        }
+    }
+    .info-header{
+        &__callback{
+            font-family: play;
+            font-size: 16px;
+            color: black;
+            border-radius: 20px;
+            padding: 0 9px;
+            margin: 15px 0 0 40px;
+            &:hover{
+                background-color:#068292;
+            }
+        }
+            &__cart{
+                margin-top: 15px;
+            }
+            
+    }
+    .bootom-header{
+        &__info{
+            &__info{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    }
+    .menu{
+        
+        &__list{
+            width: 300%;
+            height: 100vh;
+            left:-300%;
+            background-color: #ffff;
+            display:flex;
+            flex-direction:row;
+            flex-wrap: wrap;
+            &_active{
+                left:0;
+            }
+        }
+        &__link{
+            font-size: 16px;
+            color:black;
+            margin-top: 13px;
+        }
+        
+
+    }
+   
+}
