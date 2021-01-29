@@ -1,16 +1,25 @@
 .header {
-    height: 200px;
+    position: fixed;
+    width: 100%;
+    height: 160px;
     background: url(../img/header_fon.png) top no-repeat;
+  
+    
     &__top {
         max-width: 1140px;
         margin: 0 auto;
         padding: 0 4px 0 4px;
+        
+        
     }
     &__bootom {
         max-width: 1140px;
         margin: 0 auto;
-        padding: 0 20px 0 20px;
+        padding: 0 40px 0 0;
+      
+       
     }
+   
     
 }
 
@@ -44,6 +53,7 @@
         }
     }
 }
+
 .menu {
     &__list {
         display: flex;
@@ -71,8 +81,8 @@
             }
         
         }
-    
-}
+   }
+
 .contacts-header {
     display: flex;
     justify-content: center;
@@ -105,17 +115,22 @@
     }
 }
 .bootom-header {
+    &__colomn{
+        padding: 0 0 0 30px;
+    }
     &__content_container {
         height: 63px;
         display: flex;
         justify-content: space-between;
         align-items:center;
+     
     }
 }
 .action-header {
     display: flex;
     align-items: center;
     margin-top: 10px;
+    background-color:#ffff;
     &__login {
         padding: 0 0 0 36px;
         background:url(../icons/exsit_icon.png) left no-repeat;

@@ -1,4 +1,32 @@
-window.addEventListener('DOMContentLoaded', () => {
+
+  //       //  не работающий  код sliderToggle
+  // let searchSelect = document.querySelector('.search-page__select');
+  // let categoriesSearch = document.querySelector('.categories-search');
+  // searchSelect.addEventListener('click', function (e){
+  //   searchSelect.classList.toggle('_active');
+  //   _sliderToggle(categorisSearch);
+  // })
+
+
+  // window.addEventListener('DOMContentLoaded', () => {
+  //   const menu = document.querySelector('.menu__list'),
+  //   menuItem = document.querySelectorAll('.menu_item'),
+  //   hamburger = document.querySelector('.menu__icon');
+
+  //   hamburger.addEventListener('click', () => {
+  //       hamburger.classList.toggle('menu__icon_active');
+  //       menu.classList.toggle('menu__list_active');
+  //   });
+
+  //   menuItem.forEach(item => {
+  //       item.addEventListener('click', () => {
+  //           hamburger.classList.toggle('menu__icon_active');
+  //           menu.classList.toggle('menu__list_active');
+  //       })
+  //   })
+  // })
+
+  window.addEventListener('DOMContentLoaded', () => {
     const menu = document.querySelector('.menu__list'),
     menuItem = document.querySelectorAll('.menu_item'),
     hamburger = document.querySelector('.menu__icon');
@@ -14,26 +42,78 @@ window.addEventListener('DOMContentLoaded', () => {
             menu.classList.toggle('menu__list_active');
         })
     })
+  })
+
+window.addEventListener('DOMContentLoaded', () => {
+  const menu = document.querySelector('.menu-page__list'),
+  menuItem = document.querySelectorAll('.menu-page_item'),
+  hamburger = document.querySelector('.menu-page__burger');
+
+  hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('menu-page__burger_active');
+      menu.classList.toggle('menu-page__list_active');
+  });
+
+  menuItem.forEach(item => {
+      item.addEventListener('click', () => {
+          hamburger.classList.toggle('menu-page__burger_active');
+          menu.classList.toggle('menu-page__list_active');
+      })
+  })
 })
+   
+  let menuParents = document.querySelectorAll('.menu-page__parent');
+  for (let index = 0; index < menuParents.length; index++) {
+    const menuParent = menuParents[index];
+    menuParent.addEventListener('mouseenter', function (e) {
+      menuParent.classList.add('_active') ;
+    });
+    menuParent.addEventListener('mouseleave', function (e) {
+      menuParent.classList.remove('_active') ;
+    })
+  }
+ //       //  не работающий  код sliderToggle
+  let searchSelect = document.querySelector('.search-page__title');
+  let categoriesSearch = document.querySelector('.categories-search');
+  searchSelect.addEventListener('click', function (e){
+    searchSelect.classList.toggle('_active');
+    
+  })
 
-// const paren_original = document.querySelector('.content__blocks_sity');
-// const parent = document.querySelector('.content__column_river');
-// const item = document.querySelector('.content__block_item');
 
-// window.addEventListener('resize', function (event){
-//     const viewport_width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-//     if (viewport_width < 576) {
-//         if (!item.classList.contains('done')) {
-//             parent.insertBefore(item, parent.children[2]);
-//             item.classList.add(done);
-//         }
-//     } else {
-//         if (item.classList.contains('done')){
-//             parent_original.insertBefore(item, parent_original.children[2]);
-//             item.classList.remove('done');
-//         }
-//     }
-// });
+  $( document ).ready(function(){
+	   $( ".search-page__title" ).click(function(){ // задаем функцию при нажатиии на элемент с классом slide-toggle
+	     $( ".categories-search" ).slideToggle(); // плавно скрываем, или отображаем все элементы <div>
+	   });
+	});
+
+  let checkboxCategories = document.querySelectorAll('.categories-search__checkbox');
+  
+  for (let index = 0; index < checkboxCategories.length; index++) {
+    const checkboxCategory = checkboxCategories[index];
+    checkboxCategory.addEventListener('change', function (e){
+      checkboxCategory.classList.toggle('_active');
+      
+      let checkboxActiveCategories = document.querySelectorAll('.categories-search__checkbox._active') ;
+      
+    
+     
+     
+      if  (checkboxActiveCategories.length > 0 ) {
+      
+        searchSelect.classList.add('_categories');
+        let searchQuantity = searchSelect.querySelector('.search-page__quantity');
+        searchQuantity.innerHTML = searchQuantity.getAttribute('data-text') + ' ' + checkboxActiveCategories.length ;  
+     } else {
+       searchSelect.classList.remove('_categories');
+     
+     }
+    });
+  }
+
+
+
+  
 
 class DynamicAdapt {
     constructor(type) {
@@ -180,3 +260,4 @@ class DynamicAdapt {
 
 const da = new DynamicAdapt("max");
 da.init();
+

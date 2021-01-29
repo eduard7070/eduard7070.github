@@ -1,0 +1,250 @@
+.page {
+    padding:160px 0 0 0;
+    flex:1 1 auto;
+    &__container {
+        width: 1140px;
+        margin: 0 auto;
+        display:flex;
+    }
+    &__side {
+        flex: 0 0 260px;
+    }
+    &__menu {
+    }
+    &__content {
+        flex:1 1 auto;
+        padding: 0 0 0 30px;
+    }
+}
+.menu-page {
+    position: relative;
+    background: url(../../img/bg_bokovaya-panel.png) top no-repeat;
+    z-index: 10;
+    
+    &__header {
+        padding: 20px;
+        display: flex;
+        align-items: center;
+   }
+    
+    &__title {
+        font-family: UniSansCaps;
+        font-size: 30px;
+        font-weight: 900;
+        color: #ffffff;
+        letter-spacing: 0.75px;
+        line-height: 1.1;
+    }
+    &__burger {
+        flex:0 0 36px;
+        width: 35px;
+        height: 34px;      
+        background-color: #068292;
+        position: relative;
+        padding: 4px 5px;
+        span{
+            width: 24px;
+            height: 2px;
+            background-color: #ffffff;
+            display: block;
+            margin-top: 5px;
+            transition: 0.6s all;
+            cursor: pointer;
+           }
+        &_active{
+            span{
+                margin-bottom:-6px;
+                &:nth-child(1){
+                    transform:translateY(4px) rotate(-45deg);
+                }
+                &:nth-child(2){
+                    display: none;
+                }
+                &:nth-child(3){
+                    transform:translateY(3px) rotate(45deg);
+                }
+            }
+        }
+    }
+
+    &__body {
+    }
+    &__list {
+       display: none;
+        transition: 1s all;
+        &_active{
+            display:block;
+            transition: 1s all;
+        }
+    }
+    > li {
+        border-bottom: 1px solid #1aa7b9;
+    }
+    &__parent{
+        .menu-page__link{
+            &:after{
+                content:"" ;
+                background: url(../../img/streka_wspl_okne.png) top no-repeat;
+                position: absolute;
+                right: 10px;
+                top:50%;
+                transform:translateY(-50%);
+                width: 14px;
+                height: 14px;
+                }
+            }
+        &._active{
+            .submenu-page__item{
+                left:200%;
+            }    
+        
+        }
+    }
+    &__link {
+        position: relative;
+        display: block;
+        font-family: Roboto;
+        font-size: 12px;
+        font-weight: 300;
+        letter-spacing: 0.3px;
+        text-align: left;
+        color: #ffffff;
+        padding: 12px 20px;
+           &:hover{
+               background-color:#098494;
+          
+           }
+    }
+    &__submenu {
+        z-index: -100;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left:-100%; 
+        height: 100%;
+        // overflow: hidden;
+    }
+}
+.submenu-page {
+       &__item {
+       width: 280px;
+       border:2px solid #098494;
+       background-color:#ffff;
+       position: absolute; 
+       width: 100%;
+       height:100% ;
+       top:0;
+       left:-100%;
+       z-index: -100;
+       transition:  all;
+    }
+    &__menu {
+        z-index: -100;
+        border-bottom: 1px solid #dedede;
+        padding: 20px 0;
+    }
+    &__link {
+        z-index: -100;
+        color:#1ab9ce;
+        font-size: 12px;
+        font-weight: 300;
+        letter-spacing: 0.3px;
+        display: block;
+        padding: 10px 40px;
+        &:hover{
+            background-color: #1ab9ce;
+            color: #ffff;
+        }
+    }
+    &__product {
+        z-index: -100;
+        padding: 15px;
+        position: relative;
+    }
+}
+
+.item-product {
+    z-index: -100;
+    padding:15px  ;
+    &__labels {
+        z-index: -100;
+       position: absolute;
+       left:15px;
+       top:15px
+    }
+    &__label {
+        z-index: -100;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        font-size: 14px;
+        font-weight: 900;
+        margin: 0 0 10px 0;
+        padding: 0 15px;
+        text-transform: uppercase;
+        height: 21px;
+        background-color:#fd8424;
+        border-radius: 15px;
+    }
+    &__image {
+        z-index: -100;
+        height: 195px;
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        padding: 10px 0;
+        img{
+            max-width: 100%;
+            max-height: 175px;
+        }
+    }
+    &__body{
+        z-index: -100;
+        padding: 0 10px;
+
+    }
+    &__title {
+        z-index: -100;
+        font-size: 16px;
+        color:#36949f;
+        font-weight: 300;
+        margin: 0px 0px 5px 0px;
+    }
+    &__footer {
+        z-index: -100;
+       display: flex;
+       flex-wrap: wrap; 
+       justify-content: space-between;
+       align-items:center;
+    }
+    &__old-prise {
+        z-index: -100;
+        flex:1 1 100%;
+        text-align: right;
+        color:#999999;
+        font-size: 18px;
+        font-weight: 300;
+        text-decoration: line-through;
+    }
+
+    &__add {
+        z-index: -100;
+        width: 40px;
+        height: 40px;
+        background:url(../../img/korzina_icon_wspl_okne.png) 0 0 no-repeat;
+    }
+    &__price {
+        z-index: -100;
+        color:#333333;
+        font-size: 24px;
+        font-weight: 900;
+      }
+}
+
+
+
+
+
+
+
+
